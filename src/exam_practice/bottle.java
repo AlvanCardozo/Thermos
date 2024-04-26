@@ -15,6 +15,11 @@ public class bottle {
 		avi_vol = avi_vol + volume;	
 	}
 	
+	void pour_liquid(String liquid,int volume) {
+		this.liquid = liquid;
+		avi_vol =avi_vol - volume;
+	}
+	
 	void display() {
 		System.out.println("Brand: " + brand);
 		System.out.println("Liquid: " + liquid);
@@ -25,6 +30,8 @@ public class bottle {
 	public static void main(String [] args) {
 		bottle mybottle = new bottle("Prime");
 		mybottle.add_liquid("Juice",4);
+		mybottle.display();
+		mybottle.pour_liquid("juice", 3);
 		mybottle.display();
 		
 	}
